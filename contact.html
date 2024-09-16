@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Portfolio</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="skill.html">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me for any inquiries or collaborations. I look forward to connecting with you!</p>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h3>Contact Information</h3>
-            <p>Email: <a href="mailto:yourname@example.com">Harsh9937195@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername" target="_blank">https://www.linkedin.com/in/harsh-raj1905/</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio</p>
-        </div>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #93f893; /* Light green background */
+        color: white;
+      }
+
+      /* Navigation bar styles */
+      .navbar {
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center;
+        background-color: #006400; /* Dark green for the navbar */
+        padding: 15px;
+        position: relative;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+      }
+
+      .navbar-logo {
+        position: absolute; /* Absolute positioning to keep the logo on the left */
+        left: 20px;
+      }
+
+      .navbar-logo img {
+        width: 100px;
+        height: auto;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-right: 20px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffd700; /* Gold color on hover */
+      }
+
+      /* Contact Us content */
+      .contact-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+      }
+
+      .contact-form {
+        flex: 2;
+        max-width: 60%;
+      }
+
+      .contact-form h1 {
+        color: #006400;
+        font-size: 2.5em;
+      }
+
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+
+      .contact-form textarea {
+        resize: vertical; /* Allows vertical resizing of the textarea */
+        height: 150px;
+      }
+
+      .contact-form button {
+        background-color: #004d00; /* Darker green */
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background-color: #003300; /* Even darker green */
+      }
+
+      .contact-info {
+        flex: 1;
+        max-width: 35%;
+      }
+
+      .contact-info h2 {
+        color: #006400;
+        font-size: 3em;
+      }
+
+      .contact-info p {
+        color: #006400;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="main.html"></a>
+          <img src="logo.jpg" alt="Logo" />
+          <!-- Replace with your logo -->
+        </a>
+      </div>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html">Article</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Us Content -->
+    <div class="contact-container">
+      <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form action="submit_contact_form.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Email:</strong> soilspecturm@gmail.com</p>
+        <p><strong>Address:</strong> Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144411</p>
+      </div>
+    </div>
+  </body>
 </html>

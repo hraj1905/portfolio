@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #93f893;
+        color: #333;
+      }
+
+      /* Navigation Bar Styles */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #006400;
+        padding: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .navbar-logo {
+        position: absolute; /* Absolute positioning to keep the logo on the left */
+        left: 20px;
+      }
+
+      .navbar-logo img {
+        width: 100px;
+        height: auto;
+        border-radius: 90%;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-right: 20px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffd700;
+      }
+
+      /* Articles Section */
+      .articles-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+
+      .articles-title {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #006400;
+      }
+
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .article-card {
+        background-color: #d5eed5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .article-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .article-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .article-content {
+        padding: 20px;
+      }
+
+      .article-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #006400;
+      }
+
+      .article-description {
+        font-size: 1em;
+        margin-bottom: 15px;
+        color: #555;
+      }
+
+      .read-more {
+        text-decoration: none;
+        color: #006400;
+        font-weight: bold;
+        font-size: 1em;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="main.html">
+          <img src="logo.jpg" alt="Logo" />
+          <!-- Replace with your logo -->
+        </a>
+      </div>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html">Article</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Articles Section -->
+    <div class="articles-container">
+      <h1 class="articles-title">Latest Articles</h1>
+
+      <div class="articles-grid">
+        <!-- Article 1 -->
+        <div class="article-card">
+          <img
+            src="https://cdn.unenvironment.org/styles/topics_content_promo/s3/2024-06/ED-press-statement.jpg?itok=YJlew_-D"
+            alt="Solar Energy"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              UNEP Executive Director announces Azerbaijan as World Environment
+              Day 2026 hosts
+            </h2>
+            <p class="article-description">
+              A country tackling the triple planetary crisis head on. The crisis
+              of climate change, the crisis of nature and biodiversity loss, and
+              the crisis of pollution and waste.
+            </p>
+            <a
+              href="https://www.unep.org/news-and-stories/statements/unep-executive-director-announces-azerbaijan-world-environment-day-2026"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="article-card">
+          <img
+            src="https://media.post.rvohealth.io/wp-content/uploads/sites/3/2022/07/soil_pollution_and_effects_1200x628_facebook-1200x628.jpg"
+            alt="Wind Energy"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              Editorial: Plastics in the Environment: Understanding Impacts and
+              Identifying Solutions
+            </h2>
+            <p class="article-description">
+              Plastics are one of the most widely used materials in the world
+              which society will always be dependent on.
+            </p>
+            <a
+              href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.699971/full"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="article-card">
+          <img
+            src="https://www.iberdrola.com/documents/20125/40615/suelo_746x419.jpg/0c7d2a0c-f3a8-0ec0-9ad7-61f7fbf023b6?t=1627531595008"
+            alt="Hydropower"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              Microplastics in the Marine Environment: Sources, Distribution,
+              Biological Effects and Socio-Economic Impacts
+            </h2>
+            <p class="article-description">
+              A total of 23 research papers from 43 primary and partner
+              institutions, in four continents and spread across 15 countries
+              (Figure 1A), reveal the prevalence of this global problem, and
+              report on some of the solutions ahead.
+            </p>
+            <a
+              href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.676011/full"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="article-card">
+          <img
+            src="https://d1g9yur4m4naub.cloudfront.net/images/Article_Images/ImageForArticle_865_16563235204988289.jpg"
+            alt="Geothermal Energy"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              Agro-waste for renewable and sustainable green production: A
+              review
+            </h2>
+            <p class="article-description">
+              Soil pollution refers to the situation where harmful chemicals or
+              elements are present in soil at higher levels than normal,
+              negatively affecting its chemical biological, and physical
+              characteristics (Jia et al., 2018).
+            </p>
+            <a
+              href="https://www.sciencedirect.com/topics/engineering/soil-pollution"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="article-card">
+          <img
+            src="https://cdn.unenvironment.org/styles/topics_content_promo/s3/2024-07/amman-7130516_1280_0.jpg?itok=nWk0cIwt"
+            alt="Wind Energy"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              Jordan paves way for US$60 million initiative to adapt to climate
+              change
+            </h2>
+            <p class="article-description">
+              The Green Climate Fund (GCF) Board has today approved a
+              significant new project in Jordan to increase adaptation efforts,
+              supported by the UN Environment Programme (UNEP)..
+            </p>
+            <a
+              href="https://www.unep.org/news-and-stories/press-release/jordan-paves-way-us60-million-initiative-adapt-climate-change"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="article-card">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/048/789/704/small_2x/landscape-of-puddles-and-mud-in-the-countryside-photo.jpg"
+            alt="Hydropower"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2 class="article-title">
+              Land and soil pollution — widespread, harmful and growing
+            </h2>
+            <p class="article-description">
+              What do many vineyards scattered across idyllic landscapes,
+              industrial sites and landfills have in common?
+            </p>
+            <a
+              href="https://www.eea.europa.eu/signals-archived/signals-2020/articles/land-and-soil-pollution"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

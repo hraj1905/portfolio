@@ -1,52 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Portfolio</title>
-    <link rel="stylesheet" href="about.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="skill.html">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <div class="profile">
-            <img src="C:\Users\harsh\Downloads\hraj.jpg" alt="Profile Picture" class="profile-img">
-            <div class="profile-info">
-                <p>Hello! I'm Harsh Raj, a passionate web developer with a knack for creating interactive and user-friendly web applications. With a background in computer science, I have honed my skills in both front-end development.</p>
-                
-                <h3>Background</h3>
-                <p>I graduated with a degree in Computer Science from Lovely Professional University, where I developed a strong foundation in programming, algorithms, and software engineering principles. My academic journey was complemented by internships at Prodigy Infotech, where I worked on my portfolio-website project.</p>
-                
-                
-                
-                <h3>Interests and Hobbies</h3>
-                <p>When I'm not coding, I enjoy exploring new technologies, reading tech blogs, and contributing to open-source projects. I am also an avid traveler and love capturing the beauty of different cultures and landscapes through photography and love to for bike riding in off roading.</p>
-                
-                <h3>Get In Touch</h3>
-                <p>If you'd like to learn more about my work or discuss potential collaborations, feel free to reach out via the contact information on the <a href="contact.html">Contact</a> page. I'm always excited to connect with fellow tech enthusiasts and professionals.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff; /* Light green background */
+        color: white;
+      }
+
+      /* Navigation bar styles */
+      .navbar {
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center;
+        background-color: #006400; /* Dark green for the navbar */
+        padding: 15px;
+        position: relative;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+      }
+
+      .navbar-logo {
+        position: absolute; /* Absolute positioning to keep the logo on the left */
+        left: 20px;
+      }
+
+      .navbar-logo img {
+        width: 100px;
+        height: auto;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-right: 20px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffd700; /* Gold color on hover */
+      }
+      .slider_section {
+        min-height: 100vh;
+        -webkit-box-flex: 1s;
+            -ms-flex: 1;
+                flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+      }
+
+      .slider_section .row {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .slider_section .detail-box {
+        padding-left: 10%;
+        position: relative;
+        z-index: 4;
+        color: #ffffff;
+        padding: 75px 0;
+      }
+
+      .slider_section .detail-box h1 {
+        padding-left: 15%;
+        font-weight: bold;
+        font-size: 4rem;
+      }
+
+      .slider_section .detail-box p {
+        font-size: 110%;
+        padding-left: 15%;
+        width: 75%;
+        margin-top: 5px;
+      }
+
+      .slider_section .detail-box .slider-link {
+         padding-left: 15%;
+        padding-left: 15%;
+        display: inline-block;
+        padding: 10px 45px;
+        background-color: transparent;
+        color: #26b313;
+        border-radius: 5px;
+        /* border: 1px solid #fd9c6b; */
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        margin-top: 35px;
+      }
+
+      .slider_section .detail-box .slider-link:hover {
+        transform: matrix();
+        color: #ffffff;
+      }
+
+      .slider_section .slider_bg_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+      }
+
+      .slider_section .slider_bg_box img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+          object-fit: cover;
+        -o-object-position: top right;
+          object-position: top right;
+      }
+      .slider_section .detail-box .slider-link{
+        padding-left: 15%;
+
+      }
+      /* About Us content */
+      .about-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+      }
+
+      .about-text {
+        padding-left: 25px;
+        color: rgb(5, 86, 32);
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .about-text h1 {
+        font-size: 2.5em;
+      }
+
+      .about-image {
+        flex: 1;
+        text-align: right;
+      }
+
+      .about-image img {
+        max-width: 100%;
+        height: auto;
+        background-color: #9ad48e; /* Light green background color for the image */
+      }
+
+      .bottom-text {
+        color: rgb(5, 86, 32);
+        font-size: 200%;
+        text-align: left;
+        padding: 20px;
+        position: left;
+        top: 1px;
+        left: 700px;
+      }
+
+      /* Soil Pollution content */
+      .section-container {
+        color: rgb(5, 86, 32);
+        padding: 50px;
+      }
+
+      .section-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .section-image {
+        max-width: 100%;
+        height: auto;
+        background-color: #9ad48e; /* Light green background color for the image */
+      }
+
+      .section-content {
+        margin-bottom: 50px;
+      }
+      .pollution-type {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      .pollution-type img {
+        max-width: 50%;
+        height: auto;
+        background-color: #9ad48e; /* Background for images */
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="main.html">
+          <img src="logo.jpg" alt="Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html">Article</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Us Content -->
+     <section class="slider_section position-relative">
+      <div class="slider_bg_box">
+        <img src="https://wallpapercave.com/wp/wp9472207.jpg" alt="" />
+      </div>
+      <div class="slider_bg"></div>
+      <div class="container">
+        <div class="col-md-9 col-lg-8">
+          <div class="detail-box">
+            <h1>
+              For You
+              <br />
+              For The Planet
+            </h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem
+            </p>
+            <div>
+              <a href="" class="slider-link"> Read More </a>
             </div>
+          </div>
         </div>
+      </div>
+    </section>
+      <section>
+      <div class="about-container"></div>
+      <div class="about-text">
+        <h1>About Us</h1>
+        <p>
+          The Iberdrola group is today a global energy leader. We have brought
+          the energy transition forward two decades to combat climate change and
+          offer a sustainable and competitive business model that creates value
+          for society.
+        </p>
+      </div>
+      <div class="about-image">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qbYFBKFpGWl4y4SyQOVE2TGS--9jQrkj9g&s"
+          alt="Energy Transition"
+        />
+      </div>
+    </div>
+
+    <!-- Section 1: What is Soil Pollution? -->
+    <div class="section-container">
+      <h2 class="section-title">What is Soil Pollution?</h2>
+      <p class="section-content">
+        Soil pollution occurs when the concentration of chemicals, nutrients, or
+        harmful materials in the soil becomes high enough to cause harm to plant
+        life, animals, and humans. These contaminants often result from
+        industrial activities, agricultural pesticides, and improper waste
+        disposal.
+      </p>
+      <div class="about-image">
+        <img
+          src="https://example.com/soil-pollution.jpg"
+          alt="Soil Pollution"
+          class="section-image"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+    </div>
+
+    <!-- Section 2: Causes of Soil Pollution -->
+    <div class="section-container">
+      <h2 class="section-title">Causes of Soil Pollution</h2>
+      <p class="section-content">
+        Common causes of soil pollution include excessive use of fertilizers and
+        pesticides, deforestation, industrial waste, and the dumping of
+        hazardous waste. These activities alter the natural composition of the
+        soil, making it less fertile and harmful for the ecosystem.
+      </p>
+      <div class="about-image">
+        <img
+          src="https://example.com/soil-causes.jpg"
+          alt="Causes of Soil Pollution"
+          class="section-image"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+    </div>
+
+    <!-- Section 3: Effects of Soil Pollution -->
+    <div class="section-container">
+      <h2 class="section-title">Effects of Soil Pollution</h2>
+      <p class="section-content">
+        Soil pollution can lead to reduced agricultural productivity, health
+        problems in humans and animals, and the degradation of ecosystems.
+        Contaminated soil can also pollute nearby water sources, creating a
+        domino effect of environmental hazards.
+      </p>
+      <div class="about-image">
+        <img
+          src="https://example.com/soil-effects.jpg"
+          alt="Effects of Soil Pollution"
+          class="section-image"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+    </div>
+
+    <!-- Section 4: Types of Soil Pollution -->
+    <div class="section-container">
+      <h2 class="section-title">Types of Soil Pollution</h2>
+
+      <!-- Biological Pollution -->
+      <div class="pollution-type">
+        <p>
+          <strong>Biological Pollution:</strong> Caused by microorganisms,
+          parasites, or harmful bacteria.
+        </p>
+        <img
+          src="https://example.com/biological-pollution.jpg"
+          alt="Biological Pollution"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+
+      <!-- Chemical Pollution -->
+      <div class="pollution-type">
+        <p>
+          <strong>Chemical Pollution:</strong> Resulting from pesticides,
+          fertilizers, and industrial chemicals.
+        </p>
+        <img
+          src="https://example.com/chemical-pollution.jpg"
+          alt="Chemical Pollution"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+
+      <!-- Radioactive Pollution -->
+      <div class="pollution-type">
+        <p>
+          <strong>Radioactive Pollution:</strong> Contamination by radioactive
+          materials from nuclear waste or accidents.
+        </p>
+        <img
+          src="https://example.com/radioactive-pollution.jpg"
+          alt="Radioactive Pollution"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+
+      <!-- Solid Waste Pollution -->
+      <div class="pollution-type">
+        <p>
+          <strong>Solid Waste Pollution:</strong> Caused by improper disposal of
+          plastics, metals, and other solid wastes.
+        </p>
+        <img
+          src="https://example.com/solid-waste-pollution.jpg"
+          alt="Solid Waste Pollution"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+    </div>
     </section>
     
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio</p>
-        </div>
-    </footer>
-</body>
+  </body>
 </html>
